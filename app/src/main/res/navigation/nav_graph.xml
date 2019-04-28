@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/nav_landing_page">
+
+    <fragment
+        android:id="@+id/nav_landing_page"
+        android:name="com.example.navigation.LandingPage"
+        android:label="Landing Page"
+        tools:layout="@layout/fragment_landing_page" >
+        <action android:id="@+id/action_landing_page_frag_to_room_frag"
+                app:destination="@id/nav_room"/>
+        <action android:id="@+id/action_nav_landing_page_to_nav_automation"
+                app:destination="@id/nav_automation"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_room"
+        android:name="com.example.navigation.Room"
+        android:label="Room"
+        tools:layout="@layout/fragment_room" />
+
+    <fragment
+        android:id="@+id/nav_automation"
+        android:name="com.example.navigation.Automation"
+        android:label="Automation"
+        tools:layout="@layout/fragment_automation" />
+
+
+</navigation>
