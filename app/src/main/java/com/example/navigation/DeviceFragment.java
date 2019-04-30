@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Device extends Fragment {
+public class DeviceFragment extends Fragment {
 
 
-    public Device() {
+    public DeviceFragment() {
         // Required empty public constructor
     }
 

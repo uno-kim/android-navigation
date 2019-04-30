@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class History extends Fragment {
+public class AutomationFragment extends Fragment {
 
 
-    public History() {
+    public AutomationFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class History extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_history, container, false);
+        return inflater.inflate(R.layout.fragment_automation, container, false);
     }
 
 }

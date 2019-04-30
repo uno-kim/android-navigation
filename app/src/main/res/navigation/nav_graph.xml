@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_landing_page"
-        android:name="com.example.navigation.LandingPage"
+        android:name="com.example.navigation.LandingPageFragment"
         android:label="Landing Page"
         tools:layout="@layout/fragment_landing_page" >
         <action android:id="@+id/action_landing_page_frag_to_room_frag"
@@ -18,13 +18,13 @@
 
     <fragment
         android:id="@+id/nav_room"
-        android:name="com.example.navigation.Room"
+        android:name="com.example.navigation.RoomFragment"
         android:label="Room"
         tools:layout="@layout/fragment_room" />
 
     <fragment
         android:id="@+id/nav_automation"
-        android:name="com.example.navigation.Automation"
+        android:name="com.example.navigation.AutomationFragment"
         android:label="Automation"
         tools:layout="@layout/fragment_automation" />
 

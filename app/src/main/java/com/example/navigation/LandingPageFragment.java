@@ -14,11 +14,11 @@ import androidx.navigation.Navigation;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LandingPage extends Fragment {
+public class LandingPageFragment extends Fragment {
 
     private Button mButton;
 
-    public LandingPage() {
+    public LandingPageFragment() {
         // Required empty public constructor
     }
 
