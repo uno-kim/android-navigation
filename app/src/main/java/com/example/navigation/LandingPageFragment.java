@@ -7,8 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.navigation.dashboard.DashboardAdapter;
+
+import java.util.ArrayList;
+
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 
 /**
@@ -28,10 +33,16 @@ public class LandingPageFragment extends Fragment {
             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_landing_page, container, false);
-        mButton = v.findViewById(R.id.button_next);
-        mButton.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_landing_page_frag_to_room_frag,
-                        null));
+
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 1; i <= 20; ++i) {
+            list.add("Item number " + i);
+        }
+        RecyclerView recyclerView = v.findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        DashboardAdapter adapter = new DashboardAdapter(list);
+        recyclerView.setAdapter(adapter);
         return v;
     }
 
