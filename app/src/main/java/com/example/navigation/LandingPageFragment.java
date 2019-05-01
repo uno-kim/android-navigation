@@ -9,9 +9,8 @@ import android.widget.Button;
 
 import com.example.navigation.dashboard.DashboardAdapter;
 
-import java.util.ArrayList;
-
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -34,15 +33,10 @@ public class LandingPageFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_landing_page, container, false);
 
-        ArrayList<String> list = new ArrayList<>();
-        for (int i = 1; i <= 20; ++i) {
-            list.add("Item number " + i);
-        }
         RecyclerView recyclerView = v.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
-        DashboardAdapter adapter = new DashboardAdapter(list);
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(new DashboardAdapter());
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
         return v;
     }
 
